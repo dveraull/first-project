@@ -8,7 +8,6 @@
 
 import UIKit
 
-//var nombre = "f"
 
 class ViewController: UIViewController {
     
@@ -17,7 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +26,7 @@ class ViewController: UIViewController {
         
         
         let dosNavigation = segue.destination as! UINavigationController
-        let dosViewController = dosNavigation.topViewController as! ViewDosController
+        let dosViewController = dosNavigation.topViewController as! InicioViewController
         
         dosViewController.nombreString = txtNombre.text!
         
@@ -39,7 +37,6 @@ class ViewController: UIViewController {
     @IBAction func ingresarApp(_ sender: Any) {
         
         if (txtNombre.text != "") {
-            //nombre = txtNombre.text!
             performSegue(withIdentifier: "segueFromPrincipal", sender: self)
         }
     }

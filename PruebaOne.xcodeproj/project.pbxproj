@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3989410E201B892600EA71C6 /* cuidar-animales.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3989410D201B892500EA71C6 /* cuidar-animales.jpg */; };
 		39AB87A2201928E500DCBE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87A1201928E500DCBE86 /* AppDelegate.swift */; };
 		39AB87A4201928E500DCBE86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87A3201928E500DCBE86 /* ViewController.swift */; };
 		39AB87A7201928E500DCBE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AB87A5201928E500DCBE86 /* Main.storyboard */; };
@@ -15,9 +14,8 @@
 		39AB87AC201928E500DCBE86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AB87AA201928E500DCBE86 /* LaunchScreen.storyboard */; };
 		39AB87B7201928E600DCBE86 /* PruebaOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87B6201928E600DCBE86 /* PruebaOneTests.swift */; };
 		39AB87C2201928E600DCBE86 /* PruebaOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87C1201928E600DCBE86 /* PruebaOneUITests.swift */; };
-		39AB87D4201A215D00DCBE86 /* ViewDosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87D3201A215D00DCBE86 /* ViewDosController.swift */; };
-		39AB87D6201A401E00DCBE86 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87D5201A401E00DCBE86 /* Persona.swift */; };
-		39AB87D8201A522E00DCBE86 /* ViewTresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87D7201A522E00DCBE86 /* ViewTresController.swift */; };
+		39AB87D4201A215D00DCBE86 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87D3201A215D00DCBE86 /* InicioViewController.swift */; };
+		39AB87D8201A522E00DCBE86 /* CalculosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB87D7201A522E00DCBE86 /* CalculosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3989410D201B892500EA71C6 /* cuidar-animales.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cuidar-animales.jpg"; sourceTree = "<group>"; };
 		39AB879E201928E500DCBE86 /* PruebaOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39AB87A1201928E500DCBE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39AB87A3201928E500DCBE86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,9 +49,8 @@
 		39AB87BD201928E600DCBE86 /* PruebaOneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaOneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39AB87C1201928E600DCBE86 /* PruebaOneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaOneUITests.swift; sourceTree = "<group>"; };
 		39AB87C3201928E600DCBE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39AB87D3201A215D00DCBE86 /* ViewDosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDosController.swift; sourceTree = "<group>"; };
-		39AB87D5201A401E00DCBE86 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
-		39AB87D7201A522E00DCBE86 /* ViewTresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTresController.swift; sourceTree = "<group>"; };
+		39AB87D3201A215D00DCBE86 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		39AB87D7201A522E00DCBE86 /* CalculosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		391D2DC92028C86700CC9C63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39AB87A5201928E500DCBE86 /* Main.storyboard */,
+				39AB87AA201928E500DCBE86 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		391D2DCA2028C87200CC9C63 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39AB87A3201928E500DCBE86 /* ViewController.swift */,
+				39AB87D3201A215D00DCBE86 /* InicioViewController.swift */,
+				39AB87D7201A522E00DCBE86 /* CalculosViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		39AB8795201928E500DCBE86 = {
 			isa = PBXGroup;
 			children = (
@@ -105,16 +120,11 @@
 		39AB87A0201928E500DCBE86 /* PruebaOne */ = {
 			isa = PBXGroup;
 			children = (
-				3989410D201B892500EA71C6 /* cuidar-animales.jpg */,
+				391D2DCA2028C87200CC9C63 /* Controllers */,
+				391D2DC92028C86700CC9C63 /* Views */,
 				39AB87A1201928E500DCBE86 /* AppDelegate.swift */,
-				39AB87A3201928E500DCBE86 /* ViewController.swift */,
-				39AB87D3201A215D00DCBE86 /* ViewDosController.swift */,
-				39AB87D7201A522E00DCBE86 /* ViewTresController.swift */,
-				39AB87A5201928E500DCBE86 /* Main.storyboard */,
 				39AB87A8201928E500DCBE86 /* Assets.xcassets */,
-				39AB87AA201928E500DCBE86 /* LaunchScreen.storyboard */,
 				39AB87AD201928E500DCBE86 /* Info.plist */,
-				39AB87D5201A401E00DCBE86 /* Persona.swift */,
 			);
 			path = PruebaOne;
 			sourceTree = "<group>";
@@ -245,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				39AB87AC201928E500DCBE86 /* LaunchScreen.storyboard in Resources */,
-				3989410E201B892600EA71C6 /* cuidar-animales.jpg in Resources */,
 				39AB87A9201928E500DCBE86 /* Assets.xcassets in Resources */,
 				39AB87A7201928E500DCBE86 /* Main.storyboard in Resources */,
 			);
@@ -272,10 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39AB87D6201A401E00DCBE86 /* Persona.swift in Sources */,
 				39AB87A4201928E500DCBE86 /* ViewController.swift in Sources */,
-				39AB87D8201A522E00DCBE86 /* ViewTresController.swift in Sources */,
-				39AB87D4201A215D00DCBE86 /* ViewDosController.swift in Sources */,
+				39AB87D8201A522E00DCBE86 /* CalculosViewController.swift in Sources */,
+				39AB87D4201A215D00DCBE86 /* InicioViewController.swift in Sources */,
 				39AB87A2201928E500DCBE86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

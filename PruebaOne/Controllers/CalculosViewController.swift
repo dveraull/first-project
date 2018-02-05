@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewTresController: UIViewController {
+class CalculosViewController: UIViewController {
     @IBOutlet weak var lblEdadPersona: UILabel!
     @IBOutlet weak var lblEdadMascota: UILabel!
     @IBOutlet weak var lblDescripcion: UILabel!
@@ -19,12 +19,14 @@ class ViewTresController: UIViewController {
     var edadPersonaStr = ""
     var edadMascotaStr = ""
     
+    var descripcionStr = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lblEdadPersona.text = edadPersonaStr
         lblEdadMascota.text = edadMascotaStr
-        lblDescripcion.text = "Gracias!"
+        lblDescripcion.text = descripcionStr
     }
 
     override func didReceiveMemoryWarning() {
