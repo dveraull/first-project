@@ -76,6 +76,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="amigos-tres" width="800" height="552"/>
+        <image name="amigos-tres" width="400" height="276"/>
     </resources>
 </document>

@@ -65,10 +65,10 @@ class CalculosViewController: UIViewController {
         
         if diferenciaAnyos == 0 && diferenciaMeses == 0 && diferenciaDias == 0 {
             descripcion = "Tu amigo y tú tienen la misma edad."
-        } else if diferenciaAnyos < 0 || diferenciaMeses < 0 || diferenciaDias < 0 {
-            descripcion = "Tu amigo es mayor que tú por \(diffEdadString)"
+        } else if (diferenciaAnyos < 0) || (diferenciaAnyos == 0 && diferenciaMeses < 0) || (diferenciaAnyos == 0 && diferenciaMeses == 0 && diferenciaDias < 0){
+            descripcion = "Tu amigo es mayor por \(diffEdadString)"
         } else {
-            descripcion = "Tú eres mayor que tu amigo por \(diffEdadString)"
+            descripcion = "Tú eres mayor por \(diffEdadString)"
         }
         
         lblDescripcion.text = descripcion
