@@ -10,12 +10,11 @@ import UIKit
 
 class CalculosViewController: UIViewController {
     @IBOutlet weak var lblEdadPersona: UILabel!
-    @IBOutlet weak var lblEdadMascota: UILabel!
+    @IBOutlet weak var lblEdadAmigo: UILabel!
     @IBOutlet weak var lblDescripcion: UILabel!
     
     var fechaPersona = Date()
-    var fechaMascota = Date()
-    var swMascota = true
+    var fechaAmigo = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,60 +33,45 @@ class CalculosViewController: UIViewController {
         let today = Date()
         
         let fechaNacimientoPersona = fechaPersona
-        let fechaNacimientoMascota = fechaMascota
+        let fechaNacimientoAmigo = fechaAmigo
         
         let edadPersonaString = dateComponentsFormatter.string(from: fechaNacimientoPersona,to:today)!
-        let edadMascotaString = dateComponentsFormatter.string(from: fechaNacimientoMascota,to:today)!
+        let edadAmigoString = dateComponentsFormatter.string(from: fechaNacimientoAmigo,to:today)!
         
         let edadPersonaNumbers = stringsToNumbers(edadPersonaString)
-        let edadMascotaNumbers = stringsToNumbers(edadMascotaString)
+        let edadAmigoNumbers = stringsToNumbers(edadAmigoString)
         
         lblEdadPersona.text = edadString(anyos: edadPersonaNumbers.anyos, meses: edadPersonaNumbers.meses, dias: edadPersonaNumbers.dias)
         
-        var edadAnyoMascota = 0
+        lblEdadAmigo.text = edadString(anyos: edadAmigoNumbers.anyos, meses: edadAmigoNumbers.meses, dias: edadAmigoNumbers.dias)
         
-        if swMascota {
-            edadAnyoMascota = edadPerro(edad: edadMascotaNumbers.anyos)
-        } else {
-            edadAnyoMascota = edadGato(edad: edadMascotaNumbers.anyos)
-        }
+        let diferenciaAnyos = edadPersonaNumbers.anyos - edadAmigoNumbers.anyos
+        let diferenciaMeses = edadPersonaNumbers.meses - edadAmigoNumbers.meses
+        let diferenciaDias = edadPersonaNumbers.dias - edadAmigoNumbers.dias
         
-        lblEdadMascota.text = edadString(anyos: edadAnyoMascota, meses: edadMascotaNumbers.meses, dias: edadMascotaNumbers.dias)
-        
-        let diferenciaAnyos = edadPersonaNumbers.anyos - edadAnyoMascota
         var diffEdad = ""
         
         if diferenciaAnyos >= 0 {
-            diffEdad = dateComponentsFormatter.string(from: fechaNacimientoPersona,to:fechaNacimientoMascota)!
+            diffEdad = dateComponentsFormatter.string(from: fechaNacimientoPersona,to:fechaNacimientoAmigo)!
         } else {
-            diffEdad = dateComponentsFormatter.string(from: fechaNacimientoMascota,to:fechaNacimientoPersona)!
+            diffEdad = dateComponentsFormatter.string(from: fechaNacimientoAmigo,to:fechaNacimientoPersona)!
         }
         
         let diffEdadNumbers = stringsToNumbers(diffEdad)
-        let diffEdadString = edadString(anyos: diferenciaAnyos, meses: diffEdadNumbers.meses, dias: diffEdadNumbers.dias)
+        let diffEdadString = edadString(anyos: diffEdadNumbers.anyos, meses: diffEdadNumbers.meses, dias: diffEdadNumbers.dias)
         
         var descripcion = ""
         
-        let diferenciaMeses = edadPersonaNumbers.meses - edadMascotaNumbers.meses
-        let diferenciaDias = edadPersonaNumbers.dias - edadMascotaNumbers.dias
         
         if diferenciaAnyos == 0 && diferenciaMeses == 0 && diferenciaDias == 0 {
-            descripcion = "Tu mascota y tú tienen la misma edad."
+            descripcion = "Tu amigo y tú tienen la misma edad."
         } else if diferenciaAnyos < 0 || diferenciaMeses < 0 || diferenciaDias < 0 {
-            descripcion = "Tu mascota es mayor que tú por \(diffEdadString)"
+            descripcion = "Tu amigo es mayor que tú por \(diffEdadString)"
         } else {
-            descripcion = "Tú eres mayor que tu mascota por \(diffEdadString)"
+            descripcion = "Tú eres mayor que tu amigo por \(diffEdadString)"
         }
         
         lblDescripcion.text = descripcion
-    }
-    
-    func edadPerro(edad: Int) -> Int{
-        return edad * 7
-    }
-    
-    func edadGato(edad: Int) -> Int{
-        return edad * 9
     }
     
     func edadString(anyos: Int, meses: Int, dias: Int) -> String{

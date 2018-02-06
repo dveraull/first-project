@@ -11,8 +11,7 @@ import UIKit
 class InicioViewController: UIViewController {
     @IBOutlet weak var lblBienvenida: UILabel!
     @IBOutlet weak var dpFechaNacPersona: UIDatePicker!
-    @IBOutlet weak var dpFechaNacMascota: UIDatePicker!
-    @IBOutlet weak var swMascota: UISwitch!
+    @IBOutlet weak var dpFechaNacAmigo: UIDatePicker!
     @IBOutlet weak var btnCalcular: UIBarButtonItem!
     
     var nombreString = ""
@@ -31,9 +30,7 @@ class InicioViewController: UIViewController {
         
         calculosViewController.fechaPersona = dpFechaNacPersona.date
         
-        calculosViewController.fechaMascota = dpFechaNacMascota.date
-        
-        calculosViewController.swMascota = swMascota.isOn
+        calculosViewController.fechaAmigo = dpFechaNacAmigo.date
         
     }   
     
